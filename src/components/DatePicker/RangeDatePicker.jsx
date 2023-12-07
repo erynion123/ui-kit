@@ -134,7 +134,7 @@ const RangeDatePicker = ({
                 )}
                 month={startMonth}
                 modifiers={{ ...modifiers, start: value?.from }}
-                disabledDays={isDisabledStartDays}
+                disabledDays={disabledDays}
                 navbarElement={NavbarElement}
                 captionElement={CaptionStartElement}
                 selectedDays={[selectedDays?.from, selectedDays]}
@@ -154,7 +154,7 @@ const RangeDatePicker = ({
                 )}
                 month={endMonth}
                 modifiers={isStartDateIsTheSameMonth ? {} : { ...modifiers, end: value?.to }}
-                disabledDays={isDisabledEndDays}
+                disabledDays={disabledDays}
                 navbarElement={NavbarElement}
                 captionElement={CaptionEndElement}
                 selectedDays={isStartDateIsTheSameMonth ? [] : selectedDays}
